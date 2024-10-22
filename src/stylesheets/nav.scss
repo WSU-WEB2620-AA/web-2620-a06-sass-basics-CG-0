@@ -1,0 +1,47 @@
+/* Nest all the .nav style rules for the following elements:
+ * ul
+ * ul li
+ * ul li:last-child
+ * ul li a
+ * ul li span
+ * li.active a
+ */
+
+.nav {
+  position: $absolute-position;
+  right: 0em;
+  top: 2.2em;
+
+  ul {
+    list-style-type: $none;
+
+    li {
+      float: $float-left;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a,
+      span {
+        display: $display-block;
+        margin-left: 0.7em;
+        padding: 0.8em 1.2em;
+        letter-spacing: 0.06em;
+        text-decoration: $none;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        outline: 0;
+        color: #333;
+      }
+
+      &.active {
+        a {
+          background: $blue;
+          border-radius: 5px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
